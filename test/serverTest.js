@@ -8,3 +8,12 @@ describe('Index Page', function() {
     request(app).get('/').expect(200, done);    
   })
 })
+
+describe('Geoms Page', function () {
+	it('should return an array of location points', function(done) {  
+	  request(app)
+	  .get('/geoms')
+	  .expect('Content-Type', /json/)
+	  .expect(200, done);
+	});	
+})

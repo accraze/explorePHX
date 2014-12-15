@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "watchify browser.js -o public/bundle.js & node server.js"
+    "start": "watchify browser.js -o public/bundle.js & node server.js",
+    "test": "./node_modules/.bin/mocha"
   },
   "author": "accraze",
   "license": "ISC",
@@ -20,6 +21,11 @@
     "xhr": "^2.0.0"
   },
   "devDependencies": {
-    "watchify": "^2.2.1"
+    "tape": "^3.0.3",
+    "watchify": "^2.2.1",
+    "supertest": "0.3.x",
+    "mocha": "*",
+    "chai": "*",
+    "supervisor": "*"
   }
 }

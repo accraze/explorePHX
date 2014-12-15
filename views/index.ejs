@@ -4,12 +4,39 @@
 	<title>drawMe! server</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="leaflet/leaflet.css">
 	<link rel="stylesheet" href="leaflet-draw/leaflet.draw.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 0px !important;">
+		<div class="btn-group" id="control-bar">
+        	<button type="button" id="all" class="btn btn-success">All</button>
+        	<button type="button" id="hikes" class="btn btn-primary">Hikes</button>
+	    	<button type="button" id="runs" class="btn btn-danger">Runs</button>
+		</div>
+	</nav>
 	<div id="map"></div>
 	<script src="bundle.js"></script>
+	<script type="text/javascript">
+	$("#hikes").click(function() {
+            map.addLayer(others)
+            map.removeLayer(cafes)
+
+        });
+
+        $("#runs").click(function() {
+            map.addLayer(runs)
+            map.removeLayer(others)
+
+        });
+
+        $("#all").click(function() {
+            map.addLayer(runs)
+            map.addLayer(others)
+
+        });
+	</script>
 </body>
 </html>

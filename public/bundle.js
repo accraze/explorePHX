@@ -7,10 +7,8 @@ require('leaflet-providers');
 L.Icon.Default.imagePath = '/leaflet/images';
 
 var map = L.map('map');
-map.setView([33.4294, -111.9431],11); //seattle...change!!
-var layer = L.tileLayer('https://{s}.tiles.mapbox.com/v3/spatial.b625e395/{z}/{x}/{y}.png', {
-        attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-    });
+map.setView([33.4294, -111.9431],11); //phoenix metro
+var layer = L.tileLayer('https://{s}.tiles.mapbox.com/v3/spatial.b625e395/{z}/{x}/{y}.png');
 layer.addTo(map);
 
 var drawnItems, drawControl;

@@ -1,8 +1,9 @@
+//imports
 var level = require('level');
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var app = express();
+var app = exports.app = express();
 var db = level('./db');
 
 app.use(express.static(__dirname + '/public'));
@@ -13,7 +14,6 @@ app.use(bodyParser.json());
 app.engine('.ejs', require('ejs').__express);
 app.set('view engine', 'ejs');
 
-//routes
 app.get('/', function (req, res) {
 	res.render('index.ejs');
 });
@@ -37,6 +37,7 @@ app.post('/geoms', function (req, res) {
 	});
 });
 
+module.exports = app;
 
 app.listen(3000, function() {
 	console.log('app is listening on port 3000');

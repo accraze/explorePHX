@@ -1,7 +1,8 @@
 EXPLORE! PHX
 ============
-A hiking and running map focusing on Phoenix and the surrounding area.
+<img src="https://travis-ci.org/accraze/explorePHX.svg?branch=master"/>
+A hiking and running app focusing on the Phoenix Metro Area.
 
 Written in Node.js, Leaflet, and LevelDB.
 
-<img src="https://travis-ci.org/accraze/explorePHX.svg?branch=master"/>
+Work still in progress...

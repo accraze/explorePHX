@@ -37,6 +37,12 @@ app.post('/geoms', function (req, res) {
 	});
 });
 
+app.post('/geoms', function (req, res) {
+	db.put(newKey(), JSON.stringify(req.body), function () {
+		console.log('new geo added');
+	});
+});
+
 module.exports = app;
 
 app.listen(3000, function() {

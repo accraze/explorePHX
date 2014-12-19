@@ -7,7 +7,7 @@ require('leaflet-providers');
 L.Icon.Default.imagePath = '/leaflet/images';
 
 var map = L.map('map');
-map.setView([33.4294, -111.9431],11); //phoenix metro
+map.setView([33.4294, -111.9431],11); //phoenix metro area
 var layer = L.tileLayer('https://{s}.tiles.mapbox.com/v3/spatial.b625e395/{z}/{x}/{y}.png');
 layer.addTo(map);
 
@@ -33,6 +33,51 @@ map.on('draw:created', function (e) {
 		json: e.layer.toGeoJSON()
 	});
 });
+
+
+// var promise = $.getJSON("/data/hikes.json");
+//     promise.then(function(data) {
+
+
+//         var allactivities = L.geoJson(data);
+
+
+//         var runs = L.geoJson(data, {
+//             filter: function(feature, layer) {
+//                 return feature.properties.BusType == "Run";
+//             },
+//             pointToLayer: function(feature, latlng) {
+//                 return L.marker(latlng, {
+//                     icon: runIcon
+//                 }).on('mouseover', function() {
+//                     this.bindPopup(feature.properties.Name).openPopup();
+//                 });
+//             }
+//         });
+
+
+//         var others = L.geoJson(data, {
+//             filter: function(feature, layer) {
+//                 return feature.properties.BusType != "Run";
+//             },
+//             pointToLayer: function(feature, latlng) {
+//                 return L.marker(latlng, {
+
+//                 }).on('mouseover', function() {
+//                     this.bindPopup(feature.properties.Name).openPopup();
+//                 });
+//             }
+//         });
+
+//         map.fitBounds(allactivities.getBounds(), {
+//             padding: [50, 50]
+//         });
+
+
+//         runs.addTo(map)
+//         others.addTo(map)
+
+//   });
 },{"leaflet":"/Users/accraze/Sites/leaflet-draw-server/node_modules/leaflet/dist/leaflet-src.js","leaflet-draw":"/Users/accraze/Sites/leaflet-draw-server/node_modules/leaflet-draw/dist/leaflet.draw.js","leaflet-providers":"/Users/accraze/Sites/leaflet-draw-server/node_modules/leaflet-providers/leaflet-providers.js","xhr":"/Users/accraze/Sites/leaflet-draw-server/node_modules/xhr/index.js"}],"/Users/accraze/Sites/leaflet-draw-server/node_modules/leaflet-draw/dist/leaflet.draw.js":[function(require,module,exports){
 /*
 	Leaflet.draw, a plugin that adds drawing and editing tools to Leaflet powered maps.

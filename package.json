@@ -21,11 +21,12 @@
     "xhr": "^2.0.0"
   },
   "devDependencies": {
-    "tape": "^3.0.3",
-    "watchify": "^2.2.1",
-    "supertest": "0.3.x",
-    "mocha": "*",
     "chai": "*",
-    "supervisor": "*"
+    "mocha": "*",
+    "superlevel": "^3.0.0",
+    "supertest": "0.3.x",
+    "supervisor": "*",
+    "tape": "^3.0.3",
+    "watchify": "^2.2.1"
   }
 }

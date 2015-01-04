@@ -27,7 +27,7 @@ request('/geoms', function (err, res) {
             return L.marker(latlng, {
                 //icon: cafeIcon
             }).on('mouseover', function() {
-                this.bindPopup(feature.properties.Name).openPopup();
+                this.bindPopup(feature.properties.Name + feature.properties).openPopup();
             });
         }
     });

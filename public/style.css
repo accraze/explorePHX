@@ -7,9 +7,26 @@ body {
 #control-bar {
 	margin: 5px;
 	color: #333;
+
 }
 
 #map {
 	height: 100%;
 	width:	100%;
+}
+
+.navbar-header {
+    float: left;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
 }

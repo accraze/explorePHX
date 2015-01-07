@@ -17,7 +17,7 @@ var drawnItems, drawControl;
 
 request('/geoms', function (err, res) {
 	var existingGeoms = JSON.parse(res.body);
-	//drawnItems = L.geoJson(existingGeoms);
+	drawnItems = L.geoJson(existingGeoms);
 	//map.addLayer(drawnItems);
 
     var runs = L.geoJson(existingGeoms, {
@@ -55,10 +55,10 @@ request('/geoms', function (err, res) {
     runs.addTo(map)
     hikes.addTo(map)
 
-    // drawControl = new L.Control.Draw({
-    //     edit: {featureGroup: drawnItems}
-    // });
-	//map.addControl(drawControl);
+    drawControl = new L.Control.Draw({
+        edit: {featureGroup: drawnItems}
+    });
+	map.addControl(drawControl);
 });
 
 map.on('draw:created', function (e) {

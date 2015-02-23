@@ -1,0 +1,46 @@
+<div class="modal-header"><a data-dismiss="modal" class="close">&times;</a>
+  <h3>Register</h3>
+</div>
+<div class="modal-body">
+  <form action="/account/register" method="post" class="form-horizontal">
+    <fieldset><br/>
+      <div class="control-group">
+        <div class="control-group">
+          <label for="name.first" class="control-label">First Name </label>
+          <div class="controls">
+            <input type="text" name="name.first" placeholder="First Name"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label for="name.last" class="control-label">Last Name</label>
+          <div class="controls">
+            <input type="text" name="name.last" placeholder="Last Name"/>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="control-group">
+          <label for="email" class="control-label">Email</label>
+          <div class="controls">
+            <input type="text" name="email" placeholder="Email Address"/>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="control-group">
+          <label for="password" class="control-label">Password</label>
+          <div class="controls">
+            <input type="password" name="password" placeholder="Password"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label for="passwordConf" class="control-label">Password Confirm</label>
+          <div class="controls">
+            <input type="password" name="passwordConf" placeholder="Password Confirm"/>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<div class="modal-footer"><a data-dismiss="modal" class="btn">Close</a><a onclick="$('.modal-body &gt; form').submit();" class="btn btn-primary">Register</a></div>

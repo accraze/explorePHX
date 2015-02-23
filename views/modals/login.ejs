@@ -1,0 +1,26 @@
+<a data-dismiss="modal" class="close">&times;
+  <h3>Log In</h3></a>
+<div class="modal-body">
+  <form action="/account/login" method="post" class="form-horizontal">
+    <fieldset><br/>
+      <div class="control-group">
+        <div class="control-group">
+          <label for="email" class="control-label">Email</label>
+          <div class="controls">
+            <input type="text" name="email" placeholder="Email Address"/>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="control-group">
+          <label for="password" class="control-label">Password</label>
+          <div class="controls">
+            <input type="password" name="password" placeholder="Password"/>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <div class="signUp"><a href="/account/register">Create an account</a></div>
+</div>
+<div class="modal-footer"><a data-dismiss="modal" class="btn">Close</a><a onclick="$('.modal-body &gt; form').submit();" class="btn btn-primary">Log In</a></div>

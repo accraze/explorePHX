@@ -1,0 +1,37 @@
+<extendslayout></extendslayout>
+<h2>Register</h2>
+<p class="lead">Register a new account</p>
+<form action="/account/register" method="post">
+  <fieldset><br/>
+    <div class="control-group">
+      <div class="control-group">
+        <label for="name.first" class="control-label">First Name </label>
+        <div class="controls">
+          <input type="text" name="name.first" placeholder="First Name"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="name.last" class="control-label">Last Name</label>
+        <div class="controls">
+          <input type="text" name="name.last" placeholder="Last Name"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="control-group">
+        <label for="email" class="control-label">Email</label>
+        <div class="controls">
+          <input type="text" name="email" placeholder="Email Address"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="control-group">
+        <label for="password" class="control-label">Password</label>
+        <div class="controls">
+          <input type="password" name="password" placeholder="Password"/>
+        </div>
+      </div>
+    </div>
+  </fieldset><a onclick="$('form').submit();" class="btn btn-primary">Register</a>
+</form>

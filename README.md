@@ -1,4 +1,4 @@
-EXPLORE! PHX <img src="https://travis-ci.org/accraze/explorePHX.svg?branch=master"/>
+EXPLORE! PHX <a href="https://travis-ci.org/accraze/explorePHX" target="_blank"><img src="https://travis-ci.org/accraze/explorePHX.svg?branch=master"/></a>
 =========================
 An open source hiking and running map focusing on the Phoenix Metro Area.
 
